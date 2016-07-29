@@ -2,12 +2,12 @@
 layout:     post
 title:      SuxChat – A Nifty Java Client-Server Chat Tool
 date:       2012-05-08
-categories: 
+categories:
 ---
 
 Back in the days when we were giving consultancy service to a company which limited the internet usage of its employees, I’ve developed a simple solution for our inside-company basic communication problem with a nifty tool written in Java. This tool have some capabilities compared to other similar solutions. It has the following features.
 
-![sux chat ss](http://sebworks.com/wp-content/uploads/2012/05/sux-chat-ss.png)
+![sux chat ss](/images/sux-chat-ss.png)
 
 - Keep alive mode, which prevents connection loss due to inactivity for a long period.  
 - Operator mode to kick out users, which is enabled with a special password.  
