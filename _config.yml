@@ -3,7 +3,7 @@ title:       sebworks
 email:       seb@sebworks.com
 author:      Eren Bekçe
 description: "Private Project Home"
-baseurl:     "/blogtest/"
+baseurl:     "/blogtest"
 url:         "https://sebworks.com"
 # date_format: "%b %-d, %Y"
 date_format: "%Y-%m-%d"
