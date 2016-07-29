@@ -7,7 +7,7 @@ categories:
 
 Back in the days when we were giving consultancy service to a company which limited the internet usage of its employees, I’ve developed a simple solution for our inside-company basic communication problem with a nifty tool written in Java. This tool have some capabilities compared to other similar solutions. It has the following features.
 
-![sux chat ss](/images/sux-chat-ss.png)
+![sux chat ss](images/sux-chat-ss.png)
 
 - Keep alive mode, which prevents connection loss due to inactivity for a long period.  
 - Operator mode to kick out users, which is enabled with a special password.  
@@ -32,8 +32,8 @@ Open with Java Jar Launcher (a.k.a double-click).
 
 Downloads:
 
-- [ChatClient3.7](/static/ChatClient3.7.jar) (binary executable)
-- [ChatServer3.7](/static//ChatServer3.7.jar) (binary executable)
-- [Sources](/static//suxchat-3.7.zip)
+- [ChatClient3.7](static/ChatClient3.7.jar) (binary executable)
+- [ChatServer3.7](static/ChatServer3.7.jar) (binary executable)
+- [Sources](static/suxchat-3.7.zip)
 
 Good luck.

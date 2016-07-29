@@ -11,7 +11,7 @@ So I created a similar component that does not navigate automatically, and you c
 http://vaadin.com/addon/vardar-touchkit-definitive-button-widget
 
 Arrow down style:
-![](/images/arrowdown-e1384539460249.png)
+![](images/arrowdown-e1384539460249.png)
 
 Arrow Up style:
-![](/images/arrowup-e1384539428845.png)
+![](images/arrowup-e1384539428845.png)

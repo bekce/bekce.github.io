@@ -15,7 +15,7 @@ We should change `SessionData` bean to thread scope. Thread scope is a custom sc
 
 ### How does it work?
 
-![session data chart](/images/image-e1384537975318.png)
+![session data chart](images/image-e1384537975318.png)
 
 In this example, non-web part is a FTP server. For the sake of simplicity I assume it uses a single thread for each client.
 
