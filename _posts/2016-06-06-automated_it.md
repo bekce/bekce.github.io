@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     draft
 title:      Automated Headless UI Testing with CasperJS, Maven and Spring Boot
 date:       2016-06-08 11:21:29
 categories: testing
@@ -45,4 +45,3 @@ Both PhantomJS and CasperJS are native executables in multiple forms for each pl
 In this guide I will explain the setup we performed
 
  (`pre-integration-test` -> `verify` -> `post-integration-test` )
-
