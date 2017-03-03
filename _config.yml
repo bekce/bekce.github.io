@@ -1,10 +1,10 @@
 # Site settings
 title:       sebworks
 email:       seb@sebworks.com
-author:      Eren Bekçe
-description: "Private Project Home"
-baseurl:     "/blogtest"
-url:         "https://sebworks.com"
+author:      S. Eren Bekçe
+description: "Yet another programming blog"
+baseurl:     ""
+url:         "https://bekce.github.io"
 # date_format: "%b %-d, %Y"
 date_format: "%Y-%m-%d"
 
@@ -30,7 +30,7 @@ enable_anchorjs: false
 # Facebook Page integration
 # (for instant articles and other stuff)
 fb_page: false
-fb_page_id: 
+fb_page_id:
 
 # Disqus post comments
 # (leave blank to disable Disqus)
