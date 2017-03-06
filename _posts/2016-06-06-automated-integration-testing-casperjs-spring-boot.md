@@ -23,22 +23,7 @@ We aimed UI testing must be configured in platform-independent way so that one m
 
 ### Unit Testing vs Integration Testing
 
-In the table below, I have summarized the properties of and differences between Unit Testing and Integration Testing with regards to Maven inferred during my expertises.
-
-| | Unit Testing | Integration Testing |
-|-|:-|:-|
-| Tests | easily reproducible headless cases: utility functions, partially independent business logic, isolated functionalities with mocking | reproducible realistic cases (including -but not limited to- UI) often depending on other systems with little to no mocking but still isolated from production instances |
-| Applicable Project Types | any project, particularly important for library or utility projects | shippable projects, often the last module(s) in multi-module project chains |
-| Coverage Goals | increase as much as possible | complete it |
-| Maintained by | developer team | test team |
-| Runtime Duration | instant to short | medium to long |
-| Typical Run Interval | often: after every push to main branch (must be automated with CI) or fixed intervals like 15mins to 1hr (depending on the project) | not-so-often: before releases/after sprints or fixed intervals (like once a day or a week), automated or manual runs |
-| Runtime Dependencies | none, must be self-sufficient | database, other services in the network (though it is best if those get automatically configured at runtime) |
-| Maven Goal | `test` | `verify` |
-| Maven Plugin | [maven-surefire-plugin](http://maven.apache.org/surefire/maven-surefire-plugin/) | [maven-failsafe-plugin](http://maven.apache.org/surefire/maven-failsafe-plugin/) |
-| Java Class Naming Convention | Ending with `Test` | Ending with `IT` |
-
-There are many articles to read on testing but they are often very long and hard to track. I hope this information is useful to some people.
+I've created a [simple table](/unit-testing-vs-integration-testing) to highlight differences between Unit Testing vs Integration Testing.
 
 ### Maven Configuration
 
@@ -208,54 +193,54 @@ After your tests are run, you will probably want to measure test coverage includ
 
 ```xml
 <plugin>
-	<groupId>org.jacoco</groupId>
-	<artifactId>jacoco-maven-plugin</artifactId>
-	<version>0.7.7.201606060606</version>
-	<executions>
-		<execution>
-			<id>pre-unit-test</id>
-			<goals>
-				<goal>prepare-agent</goal>
-			</goals>
-			<configuration>
-				<destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
-				<propertyName>surefireArgLine</propertyName>
-			</configuration>
-		</execution>
-		<execution>
-			<id>post-unit-test</id>
-			<phase>test</phase>
-			<goals>
-				<goal>report</goal>
-			</goals>
-			<configuration>
-				<dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
-				<outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
-			</configuration>
-		</execution>
-		<execution>
-			<id>pre-integration-test</id>
-			<phase>pre-integration-test</phase>
-			<goals>
-				<goal>prepare-agent</goal>
-			</goals>
-			<configuration>
-				<destFile>${project.build.directory}/coverage-reports/jacoco-it.exec</destFile>
-				<propertyName>failsafeArgLine</propertyName>
-			</configuration>
-		</execution>
-		<execution>
-			<id>post-integration-test</id>
-			<phase>post-integration-test</phase>
-			<goals>
-				<goal>report</goal>
-			</goals>
-			<configuration>
-				<dataFile>${project.build.directory}/coverage-reports/jacoco-it.exec</dataFile>
-				<outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
-			</configuration>
-		</execution>
-	</executions>
+  <groupId>org.jacoco</groupId>
+  <artifactId>jacoco-maven-plugin</artifactId>
+  <version>0.7.7.201606060606</version>
+  <executions>
+  	<execution>
+  		<id>pre-unit-test</id>
+  		<goals>
+  			<goal>prepare-agent</goal>
+  		</goals>
+  		<configuration>
+  			<destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
+  			<propertyName>surefireArgLine</propertyName>
+  		</configuration>
+  	</execution>
+  	<execution>
+  		<id>post-unit-test</id>
+  		<phase>test</phase>
+  		<goals>
+  			<goal>report</goal>
+  		</goals>
+  		<configuration>
+  			<dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
+  			<outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
+  		</configuration>
+  	</execution>
+  	<execution>
+  		<id>pre-integration-test</id>
+  		<phase>pre-integration-test</phase>
+  		<goals>
+  			<goal>prepare-agent</goal>
+  		</goals>
+  		<configuration>
+  			<destFile>${project.build.directory}/coverage-reports/jacoco-it.exec</destFile>
+  			<propertyName>failsafeArgLine</propertyName>
+  		</configuration>
+  	</execution>
+  	<execution>
+  		<id>post-integration-test</id>
+  		<phase>post-integration-test</phase>
+  		<goals>
+  			<goal>report</goal>
+  		</goals>
+  		<configuration>
+  			<dataFile>${project.build.directory}/coverage-reports/jacoco-it.exec</dataFile>
+  			<outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
+  		</configuration>
+  	</execution>
+  </executions>
 </plugin>
 ```
 
@@ -305,44 +290,44 @@ For integration testing, we need classes named as `*IT`. In `DemoIT` class below
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class DemoIT {
 
-	@LocalServerPort
-	private int serverPort;
+  @LocalServerPort
+  private int serverPort;
 
-	@Test
-	public void casperJS() throws Exception {
-		CasperIT.serverPort = this.serverPort;
-		CasperIT.countDownLatch();
-		JUnitCore.runClasses(CasperIT.class);
-	}
+  @Test
+  public void casperJS() throws Exception {
+  	CasperIT.serverPort = this.serverPort;
+  	CasperIT.countDownLatch();
+  	JUnitCore.runClasses(CasperIT.class);
+  }
 
-	@RunWith(CasperRunner.class)
-	public static class CasperIT {
+  @RunWith(CasperRunner.class)
+  public static class CasperIT {
 
-		private static final CountDownLatch latch = new CountDownLatch(1);
-		private static int serverPort;
+  	private static final CountDownLatch latch = new CountDownLatch(1);
+  	private static int serverPort;
 
-		/**
-		 * The latch must be counted down after server init.
-		 */
-		public static void countDownLatch() {
-			latch.countDown();
-		}
+  	/**
+  	 * The latch must be counted down after server init.
+  	 */
+  	public static void countDownLatch() {
+  		latch.countDown();
+  	}
 
-		/**
-		 * Ensures spring context is initialized before this class.
-		 */
-		@BeforeClass
-		public static void beforeClass() throws Exception {
-			latch.await(5, TimeUnit.MINUTES);
-		}
+  	/**
+  	 * Ensures spring context is initialized before this class.
+  	 */
+  	@BeforeClass
+  	public static void beforeClass() throws Exception {
+  		latch.await(5, TimeUnit.MINUTES);
+  	}
 
-		@CasperEnvironment
-		public Map<String, String> env() {
-			Map<String, String> map = new HashMap<>();
-			map.put("START_URL", "http://localhost:"+serverPort);
-			return map;
-		}
-	}
+  	@CasperEnvironment
+  	public Map<String, String> env() {
+  		Map<String, String> map = new HashMap<>();
+  		map.put("START_URL", "http://localhost:"+serverPort);
+  		return map;
+  	}
+  }
 }
 
 ```
@@ -357,28 +342,28 @@ For testing, we will possibly need some demo data, we can easily insert some dat
 @Component
 public class TestLifecycleBean {
 
-	private static final Logger logger = LoggerFactory.getLogger(TestLifecycleBean.class);
+  private static final Logger logger = LoggerFactory.getLogger(TestLifecycleBean.class);
 
-	@Autowired
-	private MongoTemplate mongoTemplate;
-	@Autowired
-	private UserRepository userRepository;
+  @Autowired
+  private MongoTemplate mongoTemplate;
+  @Autowired
+  private UserRepository userRepository;
 
-	@EventListener
-	public void handleContextRefresh(ContextRefreshedEvent event) {
-		logger.info("Importing test data...");
-		userRepository.save(new User("John", "Doe", "+901112223344"));
-		userRepository.save(new User("Jane", "Doe", "+909116667788"));
-	}
+  @EventListener
+  public void handleContextRefresh(ContextRefreshedEvent event) {
+  	logger.info("Importing test data...");
+  	userRepository.save(new User("John", "Doe", "+901112223344"));
+  	userRepository.save(new User("Jane", "Doe", "+909116667788"));
+  }
 
-	@EventListener
-	public void handleContextClose(ContextClosedEvent event) {
-		logger.info("Dropping test database...");
-		if ("demo-test".equals(mongoTemplate.getDb().getName())) {
-			mongoTemplate.getDb().dropDatabase();
-			logger.info("Dropped database: demo-test");
-		}
-	}
+  @EventListener
+  public void handleContextClose(ContextClosedEvent event) {
+  	logger.info("Dropping test database...");
+  	if ("demo-test".equals(mongoTemplate.getDb().getName())) {
+  		mongoTemplate.getDb().dropDatabase();
+  		logger.info("Dropped database: demo-test");
+  	}
+  }
 }
 ```
 
@@ -390,6 +375,6 @@ Note: `verify` stage is typically used to run integration tests. It also runs be
 
 ### Complete example
 
-I've also prepared a complete ready-to-run example project in [Github](https://github.com/bekce/automated-casperjs-it-demo). Please give it a star if you like it!
+I've also prepared a [complete ready-to-run example project on Github](https://github.com/bekce/automated-casperjs-it-demo). Please give it a star if you like it!
 
 Good luck!
