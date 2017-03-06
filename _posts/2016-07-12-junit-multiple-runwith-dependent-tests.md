@@ -15,19 +15,19 @@ In this example I will mention `SpringJUnit4ClassRunner` which is used to bootst
 @WebIntegrationTest
 public class MainTest {
 
-    @Test
-    public void subRunner() throws Exception {
-        System.out.println("MainTest subRunner()");
-        JUnitCore.runClasses(SubTestWithRunner.class);
-    }
+  @Test
+  public void subRunner() throws Exception {
+    System.out.println("MainTest subRunner()");
+    JUnitCore.runClasses(SubTestWithRunner.class);
+  }
 
-    @RunWith(CasperRunner.class)
-    public static class SubTestWithRunner {
-        @BeforeClass
-        public static void init() throws Exception {
-            System.out.println("SubTestWithRunner init()");
-        }
+  @RunWith(CasperRunner.class)
+  public static class SubTestWithRunner {
+    @BeforeClass
+    public static void init() throws Exception {
+      System.out.println("SubTestWithRunner init()");
     }
+  }
 }
 ```
 

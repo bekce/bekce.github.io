@@ -14,7 +14,7 @@ Automated Headless UI testing for a Java application is often painful to setup a
 
 [Spring Boot](http://projects.spring.io/spring-boot/) is a prominent framework for developing web applications and it includes its own embedded application server so you don't have to deal with them.
 
-### Maven discussion
+## Maven discussion
 
 Despite seeming easy, doing full UI testing in `test` phase is not a good practice as your app probably needs some db connectivity and some other specific methods to run properly. Which means your unit tests will fail before you even package your app. This practice often leads to skipping tests in every Maven build so you're left with _effectively useless_ test code base.
 
@@ -22,7 +22,7 @@ Maven has a `verify` goal designed to perform integration testing. It also has `
 
 We aimed UI testing must be configured in platform-independent way so that one must install absolutely nothing on a Linux, Windows or OS X machine other than Maven to run full UI integration testing just with `mvn verify`.
 
-### Unit Testing vs Integration Testing
+## Unit Testing vs Integration Testing
 
 In the table below, I have summarized the properties of and differences between Unit Testing and Integration Testing with regards to Maven inferred during my expertises.
 
@@ -41,7 +41,7 @@ In the table below, I have summarized the properties of and differences between 
 
 There are many articles to read on testing but they are often very long and hard to track. I hope this information is useful to some people. Please comment below if you think this can be improved!
 
-### Maven Configuration
+## Maven Configuration
 
 Both PhantomJS and CasperJS are native executables so they come in different versions for each platform. Following maven plugins download the platform specific executables automatically. If you have a multi-module maven project, put these plugins in the project that you want to run automated tests on (the one with the main application context - `@SpringBootApplication`).
 
@@ -203,7 +203,7 @@ For each platform, CasperJS runnable comes with different extensions. Therefore 
 
 Note that for a `Linux` system, we also need to mark the runnable as executable with `chmod +x` command.
 
-### JaCoCo plugin for coverage
+## JaCoCo plugin for coverage
 
 After your tests are run, you will probably want to measure test coverage including coverage from the CasperJS tests and report it to a SonarQube server or something similar. For that we need to configure the `jacoco-maven-plugin` with proper configuration. Note that there will be two report files: `jacoco-ut.exec` for unit tests and `jacoco-it.exec` for integration tests. SonarQube can understand those reports as seperate and show Unit Coverage, Integration Coverage and Combined Coverage metrics, which is cool.
 
@@ -260,7 +260,7 @@ After your tests are run, you will probably want to measure test coverage includ
 </plugin>
 ```
 
-### CasperJS script
+## CasperJS script
 
 Put this simple script in `src/test/resources/casperjs/demo.casper.js` file. It automatically runs all classpath files matching `/casperjs/*.casper.js`. You can learn more about how to write scripts [here](https://github.com/casperjs/casperjs).
 
@@ -296,7 +296,7 @@ casper.test.begin('Demo CasperIT test', function suite(test) {
 });
 ```
 
-### Java Classes
+## Java Classes
 
 For integration testing, we need classes named as `*IT`. In `DemoIT` class below, we're instructing Spring to run on a random port via `@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)` annotation. After initialization is complete, `@LocalServerPort` retrieves the random port number so we pass it down as an argument to the CasperJS script (`demo.casper.js`). `CasperIT` class waits the application context to start via the `CountDownLatch`. When the initialization is complete, `@Test` method releases the latch and instructs JUnit to run `CasperIT` class.
 
@@ -348,7 +348,7 @@ public class DemoIT {
 
 ```
 
-### Using a seperate test database
+## Using a seperate test database
 
 We should not do integration testing with production database. In this example I use `spring.data.mongodb.uri=mongodb://localhost/demo-test` property to target a different database.
 
@@ -383,13 +383,13 @@ public class TestLifecycleBean {
 }
 ```
 
-### Running
+## Running
 
 It should be all set! Just run `mvn verify`!
 
 Note: `verify` stage is typically used to run integration tests. It also runs before `install`, so you can also use that command.
 
-### Complete example
+## Complete example
 
 I've also prepared a [complete ready-to-run example project on Github](https://github.com/bekce/automated-casperjs-it-demo). Please give it a star if you like it!
 
