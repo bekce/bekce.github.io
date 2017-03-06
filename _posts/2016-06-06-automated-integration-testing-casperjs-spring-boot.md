@@ -33,17 +33,17 @@ To run the CasperJS from Java we will need `casperjs-junit` library which is bas
 
 ```xml
 <dependency>
-	<groupId>org.webjars.bower</groupId>
-	<artifactId>casperjs</artifactId>
-	<version>1.1.1</version>
-	<scope>test</scope>
+  <groupId>org.webjars.bower</groupId>
+  <artifactId>casperjs</artifactId>
+  <version>1.1.1</version>
+  <scope>test</scope>
 </dependency>
 
 <dependency>
-	<groupId>com.github.raonifn</groupId>
-	<artifactId>casperjs-junit</artifactId>
-	<version>0.4.1.1-SNAPSHOT</version>
-	<scope>test</scope>
+  <groupId>com.github.raonifn</groupId>
+  <artifactId>casperjs-junit</artifactId>
+  <version>0.4.1.1-SNAPSHOT</version>
+  <scope>test</scope>
 </dependency>
 ```
 
@@ -118,12 +118,12 @@ Now we will configure the main plugins to download and install PhantomJS, downlo
     </plugin>
 
     <plugin>
-    	<groupId>org.apache.maven.plugins</groupId>
-    	<artifactId>maven-surefire-plugin</artifactId>
-    	<version>2.19</version>
-    	<configuration>
-    		<argLine>${surefireArgLine}</argLine>
-    	</configuration>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>2.19</version>
+      <configuration>
+        <argLine>${surefireArgLine}</argLine>
+      </configuration>
     </plugin>
 
     <!-- ... -->
@@ -197,49 +197,49 @@ After your tests are run, you will probably want to measure test coverage includ
   <artifactId>jacoco-maven-plugin</artifactId>
   <version>0.7.7.201606060606</version>
   <executions>
-  	<execution>
-  		<id>pre-unit-test</id>
-  		<goals>
-  			<goal>prepare-agent</goal>
-  		</goals>
-  		<configuration>
-  			<destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
-  			<propertyName>surefireArgLine</propertyName>
-  		</configuration>
-  	</execution>
-  	<execution>
-  		<id>post-unit-test</id>
-  		<phase>test</phase>
-  		<goals>
-  			<goal>report</goal>
-  		</goals>
-  		<configuration>
-  			<dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
-  			<outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
-  		</configuration>
-  	</execution>
-  	<execution>
-  		<id>pre-integration-test</id>
-  		<phase>pre-integration-test</phase>
-  		<goals>
-  			<goal>prepare-agent</goal>
-  		</goals>
-  		<configuration>
-  			<destFile>${project.build.directory}/coverage-reports/jacoco-it.exec</destFile>
-  			<propertyName>failsafeArgLine</propertyName>
-  		</configuration>
-  	</execution>
-  	<execution>
-  		<id>post-integration-test</id>
-  		<phase>post-integration-test</phase>
-  		<goals>
-  			<goal>report</goal>
-  		</goals>
-  		<configuration>
-  			<dataFile>${project.build.directory}/coverage-reports/jacoco-it.exec</dataFile>
-  			<outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
-  		</configuration>
-  	</execution>
+    <execution>
+      <id>pre-unit-test</id>
+      <goals>
+        <goal>prepare-agent</goal>
+      </goals>
+      <configuration>
+        <destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
+        <propertyName>surefireArgLine</propertyName>
+      </configuration>
+    </execution>
+    <execution>
+      <id>post-unit-test</id>
+      <phase>test</phase>
+      <goals>
+        <goal>report</goal>
+      </goals>
+      <configuration>
+        <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
+        <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
+      </configuration>
+    </execution>
+    <execution>
+      <id>pre-integration-test</id>
+      <phase>pre-integration-test</phase>
+      <goals>
+        <goal>prepare-agent</goal>
+      </goals>
+      <configuration>
+        <destFile>${project.build.directory}/coverage-reports/jacoco-it.exec</destFile>
+        <propertyName>failsafeArgLine</propertyName>
+      </configuration>
+    </execution>
+    <execution>
+      <id>post-integration-test</id>
+      <phase>post-integration-test</phase>
+      <goals>
+        <goal>report</goal>
+      </goals>
+      <configuration>
+        <dataFile>${project.build.directory}/coverage-reports/jacoco-it.exec</dataFile>
+        <outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
+      </configuration>
+    </execution>
   </executions>
 </plugin>
 ```
@@ -295,38 +295,38 @@ public class DemoIT {
 
   @Test
   public void casperJS() throws Exception {
-  	CasperIT.serverPort = this.serverPort;
-  	CasperIT.countDownLatch();
-  	JUnitCore.runClasses(CasperIT.class);
+    CasperIT.serverPort = this.serverPort;
+    CasperIT.countDownLatch();
+    JUnitCore.runClasses(CasperIT.class);
   }
 
   @RunWith(CasperRunner.class)
   public static class CasperIT {
 
-  	private static final CountDownLatch latch = new CountDownLatch(1);
-  	private static int serverPort;
+    private static final CountDownLatch latch = new CountDownLatch(1);
+    private static int serverPort;
 
-  	/**
-  	 * The latch must be counted down after server init.
-  	 */
-  	public static void countDownLatch() {
-  		latch.countDown();
-  	}
+    /**
+    * The latch must be counted down after server init.
+    */
+    public static void countDownLatch() {
+      latch.countDown();
+    }
 
-  	/**
-  	 * Ensures spring context is initialized before this class.
-  	 */
-  	@BeforeClass
-  	public static void beforeClass() throws Exception {
-  		latch.await(5, TimeUnit.MINUTES);
-  	}
+    /**
+    * Ensures spring context is initialized before this class.
+    */
+    @BeforeClass
+    public static void beforeClass() throws Exception {
+      latch.await(5, TimeUnit.MINUTES);
+    }
 
-  	@CasperEnvironment
-  	public Map<String, String> env() {
-  		Map<String, String> map = new HashMap<>();
-  		map.put("START_URL", "http://localhost:"+serverPort);
-  		return map;
-  	}
+    @CasperEnvironment
+    public Map<String, String> env() {
+      Map<String, String> map = new HashMap<>();
+      map.put("START_URL", "http://localhost:"+serverPort);
+      return map;
+    }
   }
 }
 
@@ -351,18 +351,18 @@ public class TestLifecycleBean {
 
   @EventListener
   public void handleContextRefresh(ContextRefreshedEvent event) {
-  	logger.info("Importing test data...");
-  	userRepository.save(new User("John", "Doe", "+901112223344"));
-  	userRepository.save(new User("Jane", "Doe", "+909116667788"));
+    logger.info("Importing test data...");
+    userRepository.save(new User("John", "Doe", "+901112223344"));
+    userRepository.save(new User("Jane", "Doe", "+909116667788"));
   }
 
   @EventListener
   public void handleContextClose(ContextClosedEvent event) {
-  	logger.info("Dropping test database...");
-  	if ("demo-test".equals(mongoTemplate.getDb().getName())) {
-  		mongoTemplate.getDb().dropDatabase();
-  		logger.info("Dropped database: demo-test");
-  	}
+    logger.info("Dropping test database...");
+    if ("demo-test".equals(mongoTemplate.getDb().getName())) {
+      mongoTemplate.getDb().dropDatabase();
+      logger.info("Dropped database: demo-test");
+    }
   }
 }
 ```
