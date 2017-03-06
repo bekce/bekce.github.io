@@ -1,8 +1,9 @@
 ---
 layout:     post
-title:      Automated Headless UI Testing with CasperJS, Maven and Spring Boot
+title:      Automated Headless UI and Integration Testing with CasperJS, Maven and Spring Boot
 date:       2017-03-06 18:22:00
 categories: testing
+redirect_from: "/unit-testing-vs-integration-testing"
 ---
 
 Automated Headless UI testing for a Java application is often painful to setup and perform correctly. It needs to be integrated in the build cycle, there may be multiple runtime dependencies and platform specific configuration, etc. In this post, I explain how we implemented platform-independent automated UI testing with CasperJS, Maven and Spring Boot.
@@ -23,7 +24,22 @@ We aimed UI testing must be configured in platform-independent way so that one m
 
 ### Unit Testing vs Integration Testing
 
-I've created a [simple table](/unit-testing-vs-integration-testing) to highlight differences between Unit Testing vs Integration Testing.
+In the table below, I have summarized the properties of and differences between Unit Testing and Integration Testing with regards to Maven inferred during my expertises.
+
+| | Unit Testing | Integration Testing |
+|-|:-|:-|
+| Tests | easily reproducible headless cases: utility functions, partially independent business logic, isolated functionalities with mocking | reproducible realistic cases (including -but not limited to- UI) often depending on other systems with little to no mocking but still isolated from production instances |
+| Applicable Project Types | any project, particularly important for library or utility projects | shippable projects, often the last module(s) in multi-module project chains |
+| Coverage Goals | increase as much as possible | complete it |
+| Maintained by | developer team | test team |
+| Runtime Duration | instant to short | medium to long |
+| Typical Run Interval | often: after every push to main branch (must be automated with CI) or fixed intervals like 15mins to 1hr (depending on the project) | not-so-often: before releases/after sprints or fixed intervals (like once a day or a week), automated or manual runs |
+| Runtime Dependencies | none, must be self-sufficient | database, other services in the network (though it is best if those get automatically configured at runtime) |
+| Maven Goal | `test` | `verify` |
+| Maven Plugin | [maven-surefire-plugin](http://maven.apache.org/surefire/maven-surefire-plugin/) | [maven-failsafe-plugin](http://maven.apache.org/surefire/maven-failsafe-plugin/) |
+| Java Class Naming Convention | Ending with `Test` | Ending with `IT` |
+
+There are many articles to read on testing but they are often very long and hard to track. I hope this information is useful to some people. Please comment below if you think this can be improved!
 
 ### Maven Configuration
 
