@@ -29,6 +29,7 @@ The id needs to be unique across inputs and is used for outputting.
 `|a∩b| / |aub| >= t`
 
 Pseudo-code for the similarity function:
+
     is_similar (r1, r2, threshold) : boolean
     define shared as number_of_shared_tokens_in(r1,r2)
     define similarity as (r1.total_count + r2.total_count - shared) / shared
