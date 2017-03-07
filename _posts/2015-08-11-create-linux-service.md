@@ -12,6 +12,8 @@ Usually you need to create a linux service from a command. Here I present a simp
 *   Working directory
 *   User name for the spawned process
 
+Create your service script:
+
     sudo nano /etc/init.d/<service_name>
 
 ```shell

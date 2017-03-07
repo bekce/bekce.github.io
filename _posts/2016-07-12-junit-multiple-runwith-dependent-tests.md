@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "JUnit: Multiple @RunWith & Dependent Tests"
+title:      "JUnit: Multiple Runners and Dependent Tests"
 date:       2016-07-12 15:12:00
 categories: testing
 ---
