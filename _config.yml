@@ -1,7 +1,7 @@
 # Site settings
 title:       sebworks
 email:       seb@sebworks.com
-author:      S. Eren Bekçe
+author:      Selim Eren Bekçe
 description: "Yet another programming blog"
 baseurl:     ""
 url:         "https://bekce.github.io"
@@ -109,7 +109,7 @@ redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 #permalink:    pretty
 permalink:    /:title
-paginate:     4
+paginate:     10
 sass:
   style: compressed
 gems:
