@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      SuxChat – A Nifty Java Client-Server Chat Tool
-date:       2012-05-08
-categories:
+date:       2012-05-08 00:37:00
+categories: java
 ---
 
 Back in the days when we were giving consultancy service to a company which limited the internet usage of its employees, I’ve developed a simple solution for our inside-company basic communication problem with a nifty tool written in Java. This tool have some capabilities compared to other similar solutions. It has the following features.

@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Upgrading MongoDB from 2.x to 3.x
-date:       2016-07-28
+date:       2016-07-28 12:26:00
 categories: sysadmin
 ---
 

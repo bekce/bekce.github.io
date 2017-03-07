@@ -2,6 +2,7 @@
 layout:     post
 title:      "Java keystore generation regarding intermediate certificates"
 date:       2015-07-30 08:38:00
+categories: sysadmin
 ---
 
 If you’re hosting a Java application server such as Tomcat or Jetty, you’d definitely like to configure SSL for the end-to-end security. Java (by default) implements its own SSL implementation, which instructs you to use keystore file to store private keys and certificates, using a special keytool command which comes installed with Java.

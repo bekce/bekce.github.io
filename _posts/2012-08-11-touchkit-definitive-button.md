@@ -1,7 +1,8 @@
 ---
 layout:     post
 title:      Touchkit Definitive Button
-date:       2012-08-11
+date:       2012-08-11 13:12:00
+categories: java, vaadin
 ---
 
 In Vaadin Touchkit, despite NavigationButton has perfect styling, it has one downside that it needs to navigate to a new view for every click and you cannot prevent that. Moreover you cannot change the navigation arrow that is pointing right.

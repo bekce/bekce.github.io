@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "JUnit: Multiple @RunWith & Dependent Tests"
-date:       2016-07-12
+date:       2016-07-12 15:12:00
 categories: testing
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      Replacing Session Scope with Thread Scope in Spring Framework
-date:       2013-11-15
-categories: spring
+date:       2013-11-15 19:55:00
+categories: java, spring
 ---
 
 If you develop a web application with Spring Framework, your session scoped beans hold various session bound attributes like logged user. The advantage of storing these values in Spring Application Context is that your service layers (SOA) can benefit from it without getting the current user object from every request against the servlet.

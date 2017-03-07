@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Similarity Join on Spark
-date:       2016-10-20
+date:       2016-10-20 07:43:00
 categories: spark
 ---
 

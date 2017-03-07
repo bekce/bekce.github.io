@@ -2,6 +2,7 @@
 layout:     post
 title:      "Pig: Reparsing Strings into Tuples in Java"
 date:       2013-11-18 23:16:00
+categories: java, pig
 ---
 
 Recently, I needed to read text which is stored with PigStorage. The text also had internal bag and tuple structures so I didn’t want to reinvent the wheel. However there is no direct documentation about that, so you have to dig into the Pig source to find how does Pig itself read it. Luckily enough, I’ve found it.
