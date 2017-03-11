@@ -1,5 +1,5 @@
 {% for page in site.pages %}
-    {% if page.menu contains "true" %}
+    {% if page.menu_enabled == "true" %}
         {% if page.menu_title != null %}
           <a href="{{ page.url }}">{{ page.menu_title }}</a>
         {% else %}
