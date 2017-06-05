@@ -108,7 +108,7 @@ markdown:     kramdown
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 #permalink:    pretty
-permalink:    /:title
+permalink:    /:title/
 paginate:     10
 sass:
   style: compressed
