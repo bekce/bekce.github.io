@@ -55,10 +55,11 @@ To run the CasperJS from Java we will need `casperjs-junit` library which is bas
   <scope>test</scope>
 </dependency>
 
+<!-- Clone and install https://github.com/bekce/junit-casperjs for this dependency -->
 <dependency>
   <groupId>com.github.raonifn</groupId>
   <artifactId>casperjs-junit</artifactId>
-  <version>0.4.1.1-SNAPSHOT</version>
+  <version>0.4.1-SNAPSHOT</version>
   <scope>test</scope>
 </dependency>
 ```
@@ -262,7 +263,7 @@ After your tests are run, you will probably want to measure test coverage includ
 
 ## CasperJS script
 
-Put this simple script in `src/test/resources/casperjs/demo.casper.js` file. It automatically runs all classpath files matching `/casperjs/*.casper.js`. You can learn more about how to write scripts [here](https://github.com/casperjs/casperjs).
+Put this simple script in `src/test/resources/casperjs/demo.casper.js` file. It automatically runs all classpath files matching `/casperjs/*.casper.js`. You can learn more about how to write scripts [here](https://github.com/casperjs/casperjs) and mostly [here](http://docs.casperjs.org/en/latest/testing.html).
 
 ```js
 var sys = require('system');
@@ -277,10 +278,6 @@ if (!url) {
 casper.test.begin('Demo CasperIT test', function suite(test) {
   casper.start();
 
-  casper.test.on("fail", function(failure) {
-    failures.push(failure);
-  });
-
   //basic tests to see if we can reach the site etc.
   casper.thenOpen(url + "/", function(response) {
     console.log("Trying to open url: " + url);
@@ -290,7 +287,7 @@ casper.test.begin('Demo CasperIT test', function suite(test) {
   });
 
   casper.run(function() {
-    this.exit(failures.length);
+    test.done();
   });
 
 });
@@ -313,7 +310,15 @@ public class DemoIT {
   public void casperJS() throws Exception {
     CasperIT.serverPort = this.serverPort;
     CasperIT.countDownLatch();
-    JUnitCore.runClasses(CasperIT.class);
+		// Below part makes sure the errors in child runner is propagated correctly to this runner
+		JUnitCore jUnitCore = new JUnitCore();
+		jUnitCore.addListener(new RunListener(){
+			@Override
+			public void testFailure(Failure failure) throws Exception {
+				Assert.fail(failure.getMessage());
+			}
+		});
+		jUnitCore.run(CasperIT.class);
   }
 
   @RunWith(CasperRunner.class)
