@@ -310,15 +310,15 @@ public class DemoIT {
   public void casperJS() throws Exception {
     CasperIT.serverPort = this.serverPort;
     CasperIT.countDownLatch();
-		// Below part makes sure the errors in child runner is propagated correctly to this runner
-		JUnitCore jUnitCore = new JUnitCore();
-		jUnitCore.addListener(new RunListener(){
-			@Override
-			public void testFailure(Failure failure) throws Exception {
-				Assert.fail(failure.getMessage());
-			}
-		});
-		jUnitCore.run(CasperIT.class);
+    // Below part makes sure the errors in child runner is propagated correctly to this runner
+    JUnitCore jUnitCore = new JUnitCore();
+    jUnitCore.addListener(new RunListener(){
+      @Override
+      public void testFailure(Failure failure) throws Exception {
+        Assert.fail(failure.getMessage());
+      }
+    });
+    jUnitCore.run(CasperIT.class);
   }
 
   @RunWith(CasperRunner.class)
