@@ -7,19 +7,19 @@ categories: sysadmin
 
 This is a guide-like post to build a full server to serve as a mongodb server in your PaaS, with valid SSL certificates and authentication enabled.
 
-Note that in this guide we didn't mention anything about firewall setups as it's usually vendor specific.
+Note that in this guide we won't mention anything about firewall setups as it's usually vendor specific.
 You should basically allow ports 22, 80 and 27017 for this setup to work correctly.
 You can also disable default firewall in CentOS servers by `systemctl disable firewalld`, it's your call.
 
-1. I usually pick CentOS for production stuff, as Ubuntu is too flakey and wobbly. Run everything with `root`. No bullshitting around here.
+\1. I usually pick CentOS for production stuff, as Ubuntu is too flakey and wobbly. Run everything with `root`. No bullshitting around here.
 
-2. MongoDB might require huge burst memory from time to time, and since you're reading this I assume you've got a budget friendly server which has low memory (hopefully has SSD tho!), so better setup a swapfile first.
+\2. MongoDB might require huge burst memory from time to time, and since you're reading this I assume you've got a budget friendly server which has low memory (hopefully has SSD tho!), so better setup a swapfile first.
 
 ```sh
 # check whether you have swap on
 swapon -s
 # if not, go on
-sudo fallocate -l 4G /swapfile
+fallocate -l 4G /swapfile
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
@@ -30,7 +30,7 @@ free -m
 echo '/swapfile   swap    swap    sw  0   0' >> /etc/fstab
 ```
 
-3. Install mongodb
+\3. Install mongodb
 
 ```sh
 cat>/etc/yum.repos.d/mongodb-org-4.0.repo <<EOF
@@ -49,7 +49,7 @@ systemctl enable mongod
 
 Run in `mongo` shell and add your first user like below.
 
-Read more [here](https://docs.mongodb.com/manual/tutorial/enable-authentication/) for adding more users and learn about roles.
+Read [this](https://docs.mongodb.com/manual/tutorial/enable-authentication/) to learn about adding more users and roles.
 It's recommended to NOT use admin user for projects, and rather setup a new user account for every application/project you want to develop and only give permissions to a specific set of databases.
 You can have a single mongodb server to cater for multiple applications/projects without compromising security (assuming mongod does not have a flaw in their implementation).
 
@@ -64,7 +64,7 @@ db.createUser(
 )
 ```
 
-4. Install fail2ban. This will protect your server against some types of attacks.
+\4. Install fail2ban. This will protect your server against some types of attacks.
 
 ```sh
 yum install epel-release
@@ -101,7 +101,7 @@ service fail2ban restart
 I've also activated mongo-auth plugin so it will ban clients that fails too many times to authenticate on mongod.
 You can (and should) test this by trying to login from another machine (after setting up everything until end first) and watch fail2ban via `fail2ban-client status mongo-auth`.
 
-5. Set up letsencrypt. Make sure `hostname` actually produces the correct hostname for your server.
+\5. Set up letsencrypt. Make sure `hostname` actually produces the correct hostname for your server.
 
 ```sh
 yum -y install yum-utils certbot
@@ -129,7 +129,7 @@ Run renew.sh once, this will put the generated key file in the right place.
 
     /root/renew.sh
 
-6. Tweak mongodb to accept ssl and authorization
+\6. Tweak mongodb to accept ssl and authorization
 
 Add/chance following section in `/etc/mongod.conf`:
 
@@ -147,6 +147,8 @@ security:
 ```
 
 Restart service: `service mongod restart`
+
+\7. Test
 
 Now SSL and authentication is activated on your server and it is ready to go. 
 Try connecting to your server via: `mongo --ssl -u admin -p password --authenticationDatabase "admin" my.example.com`.

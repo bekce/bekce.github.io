@@ -112,9 +112,10 @@ permalink:    /:title/
 paginate:     10
 sass:
   style: compressed
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-gist
 # https://github.com/jekyll/jekyll/issues/2938
 exclude: [vendor]
