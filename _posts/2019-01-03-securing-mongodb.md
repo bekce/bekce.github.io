@@ -33,7 +33,7 @@ echo '/swapfile   swap    swap    sw  0   0' >> /etc/fstab
 3\. Install mongodb
 
 ```sh
-cat>/etc/yum.repos.d/mongodb-org-4.0.repo <<EOF
+cat>/etc/yum.repos.d/mongodb-org-4.0.repo <<\EOF
 [mongodb-org-4.0]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.0/x86_64/
@@ -70,7 +70,7 @@ db.createUser(
 yum install epel-release
 yum install fail2ban
 
-cat>/etc/fail2ban/jail.local <<EOF
+cat>/etc/fail2ban/jail.local <<\EOF
 [DEFAULT]
 # Ban hosts for one hour:
 bantime = 3600
@@ -107,7 +107,7 @@ You can (and should) test this by trying to login from another machine (after se
 yum -y install yum-utils certbot
 certbot certonly --standalone -d my.example.com
 
-cat>/root/renew.sh <<EOF
+cat>/root/renew.sh <<\EOF
 #!/bin/bash
 HOSTNAME=`hostname`
 cat /etc/letsencrypt/live/$HOSTNAME/fullchain.pem /etc/letsencrypt/live/$HOSTNAME/privkey.pem > /etc/ssl/mongodb.pem
