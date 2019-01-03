@@ -101,7 +101,7 @@ service fail2ban restart
 I've also activated mongo-auth plugin so it will ban clients that fails too many times to authenticate on mongod.
 You can (and should) test this by trying to login from another machine (after setting up everything until end first) and watch fail2ban via `fail2ban-client status mongo-auth`.
 
-5\. Set up letsencrypt. Make sure `hostname` actually produces the correct hostname for your server.
+5\. Set up letsencrypt. First make sure `hostname` actually produces the correct hostname for your server. And that hostname resolves to the public ip of your server.
 
 ```sh
 yum -y install yum-utils certbot
