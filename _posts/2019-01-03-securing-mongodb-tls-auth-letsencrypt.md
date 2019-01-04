@@ -5,13 +5,15 @@ date:       2019-01-03 11:20:00
 categories: sysadmin
 ---
 
-This is a guide-like post to build a full server to serve as a mongodb server in your PaaS, with valid SSL certificates and authentication enabled.
+This is a guide to build a dedicated MongoDB server on a public or private network to serve for your PaaS, with valid TLS certificates and authentication enabled to guard against outsiders.
+
+I've checked some major MongoDB as a service (a.k.a. 'cloud', ah, what a magnificent word) providers and one called mLab does NOT even support TLS on database connections with their affordable package (not free) which is clearly a joke to me. Many other providers don't even mention TLS/SSL on their features list at all so I guess they simply assume every potential use case involves same-datacenter private networking, or some hard-to-maintain ssh tunnelling magic, blah. Or, it could be the case that they simply hadn't upgraded to MongoDB 4.0 which improved TLS connection support a lot.
 
 Note that in this guide we won't mention anything about firewall setups as it's usually vendor specific.
 You should basically allow ports 22, 80 and 27017 for this setup to work correctly.
 You can also disable default firewall in CentOS servers by `systemctl disable firewalld`, it's your call.
 
-1\. I usually pick CentOS for production stuff, as Ubuntu is too flakey and wobbly. Run everything with `root`. No bullshitting around here.
+1\. I usually pick CentOS for production stuff, as Ubuntu is too flakey and wobbly (a.k.a. you leave a server for a couple of years and *BAM!*, they change the *init* system!). Run everything with `root`. No bullshitting around here.
 
 2\. MongoDB might require huge burst memory from time to time, and since you're reading this I assume you've got a budget friendly server which has low memory (hopefully has SSD tho!), so better setup a swapfile first.
 
@@ -30,7 +32,7 @@ free -m
 echo '/swapfile   swap    swap    sw  0   0' >> /etc/fstab
 ```
 
-3\. Install mongodb
+3\. Install MongoDB 4.0. You are encouraged to only use 4+ versions because of the improved TLS security and the use of native libraries. Any newer version (4.2, 4.4, etc) would be fine as long as you use the latest yum repository.
 
 ```sh
 cat>/etc/yum.repos.d/mongodb-org-4.0.repo <<\EOF
@@ -128,6 +130,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
 Run renew.sh once, this will put the generated key file in the right place.
 
     /root/renew.sh
+
+The only 'gotcha' of this solution is that the server has to be restarted about every 2 months (the renew period for letsencrypt certificates), which will momentarily break connections. Alas, most client implementations can handle it gracefully by auto-retrying in a second, and with the help of oplog, you are unlikely to lose any data, but if your workload cannot tolerate that, use replica sets by setting up another server.
 
 6\. Tweak mongodb to accept ssl and authorization
 
