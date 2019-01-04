@@ -7,15 +7,15 @@ categories: sysadmin
 
 This is a guide to build a dedicated MongoDB server on a public or private network to serve for your PaaS, with valid TLS certificates and authentication enabled to guard against outsiders.
 
-I've checked some major MongoDB as a service (a.k.a. 'cloud', ah, what a magnificent word) providers and one called mLab does NOT even support TLS on database connections with their affordable package (not free) which is clearly a joke to me. Many other providers don't even mention TLS/SSL on their features list at all so I guess they simply assume every potential use case involves same-datacenter private networking, or some hard-to-maintain ssh tunnelling magic, blah. Or, it could be the case that they simply hadn't upgraded to MongoDB 4.0 which improved TLS connection support a lot.
+I've checked some major MongoDB as a service (a.k.a. 'cloud', ah, what a magnificent word!) providers and one called mLab does NOT even support TLS on database connections with their affordable package (not free) which is clearly a joke to me. Many other providers don't even mention TLS/SSL on their features list at all so I guess they simply assume every potential use case involves same-datacenter private networking, or some hard-to-maintain ssh tunnelling magic, blah. Or, it could be the case that they simply hadn't upgraded to MongoDB 4.0 which improved TLS connection support a lot.
 
 Note that in this guide we won't mention anything about firewall setups as it's usually vendor specific.
 You should basically allow ports 22, 80 and 27017 for this setup to work correctly.
 You can also disable default firewall in CentOS servers by `systemctl disable firewalld`, it's your call.
 
-1\. I usually pick CentOS for production stuff, as Ubuntu is too flakey and wobbly (a.k.a. you leave a server for a couple of years and *BAM!*, they change the *init* system!). Run everything with `root`. No bullshitting around here.
+1\. I usually pick CentOS for production stuff, as Ubuntu is too flakey and wobbly (a.k.a. you leave a server running for a couple of years and *BAM!*, they change the *init* system!). Run everything with `root`, no bullshitting around here.
 
-2\. MongoDB might require huge burst memory from time to time, and since you're reading this I assume you've got a budget friendly server which has low memory (hopefully has SSD tho!), so better setup a swapfile first.
+2\. MongoDB might require huge burst memory from time to time, and since you're reading this I assume you've got a budget friendly server with low memory so better setup a swapfile first. Hopefully your server has an SSD though! I've been using [Vultr.com](https://www.vultr.com/?ref=6935650) for more than 2 years now and they're extremely good on performance/price level).
 
 ```sh
 # check whether you have swap on
@@ -55,7 +55,7 @@ Read [this](https://docs.mongodb.com/manual/tutorial/enable-authentication/) to 
 It's recommended to NOT use admin user for projects, and rather setup a new user account for every application/project you want to develop and only give permissions to a specific set of databases.
 You can have a single mongodb server to cater for multiple applications/projects without compromising security (assuming mongod does not have a flaw in their implementation).
 
-```json
+```
 use admin
 db.createUser(
   {
@@ -135,7 +135,7 @@ The only 'gotcha' of this solution is that the server has to be restarted about 
 
 6\. Tweak mongodb to accept ssl and authorization
 
-Add/chance following section in `/etc/mongod.conf`:
+Add/change following section in `/etc/mongod.conf`:
 
 ```sh
 # network interfaces
@@ -156,6 +156,8 @@ Restart service: `service mongod restart`
 
 Now SSL and authentication is activated on your server and it is ready to go. 
 Try connecting to your server via: `mongo --ssl -u admin -p password --authenticationDatabase "admin" my.example.com`.
+
+For other applications, you need to use a mongodb uri like this: `mongodb://admin:password@my.example.com:27017/db_name?ssl=true`, and supply `admin` as your authenticationDatabase setting seperately.
 
 PS: I've compiled this guide from the history of commands I've performed on a machine and I may have missed some commands in between.
 If there's any issue/error running these in order, please comment below, thanks.
