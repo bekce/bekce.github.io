@@ -7,7 +7,7 @@ categories: sysadmin
 
 This is a guide to build a dedicated MongoDB server on a public or private network to serve for your PaaS, with valid TLS certificates and authentication enabled to guard against outsiders.
 
-I've checked some major MongoDB as a service (a.k.a. 'cloud', if you like fancy words) providers and one called mLab does NOT even support TLS on database connections with their affordable package (not free) which is clearly a joke to me. Many other providers don't even mention TLS/SSL on their features list at all so I guess they simply assume every potential use case involves same-datacenter private networking, or some hard-to-maintain ssh tunnelling magic, blah. Or, it could be the case that they simply hadn't upgraded to MongoDB 4.0 which improved TLS connection support a lot.
+I've checked some major MongoDB as a service (a.k.a. 'cloud', if you like fancy words) providers and one called mLab does NOT even support TLS on database connections with their affordable package (not free) which is clearly a joke to me. Many other providers don't even mention TLS/SSL on their features list at all so I guess they simply assume every potential use case involves same-datacenter private networking, or some VPN or SSH tunnelling magic, blah. Or, it could be the case that they simply hadn't upgraded to MongoDB 4.0 which improved TLS connection support a lot.
 
 Note that in this guide we won't mention anything about firewall setups as it's usually vendor specific.
 You should basically allow ports 22, 80 and 27017 for this setup to work correctly.
