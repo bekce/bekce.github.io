@@ -6,7 +6,7 @@ tags: about
 menu_enabled: true
 ---
 
-We mainly offer legacy software maintenance, refactoring and development services for Java based enterprise applications, 
+We mainly offer long-term legacy software maintenance, refactoring and development services for Java based enterprise applications, 
 software specifically featuring any of
 Spring Framework (Core, Beans, JDBC, Data, Cloud), Java EE, Play Framework, Maven, Hibernate, JPA, Vaadin, REST and JSF 
 technologies, with our 10 years of software engineering experience in them.
