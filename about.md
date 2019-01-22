@@ -18,6 +18,7 @@ We can make your legacy solution faster, asynchronous, modern, compliant and sec
 - making use of proper data structures and better memory management,
 - eliminating unnecessary caching or installing necessary caching of data,
 - refactoring synchronous operations to be fully asynchronous,
+- rewriting database accesses for specific needs by native queries with joins and aggregations to make data access extremely faster,
 - upgrading Java runtime and libraries to any version, including doing necessary code and build changes,
 - employ automatic database schema versioning methods to successfully perform database refactorings and schema updates without friction,
 - running security checks (according to [OWASP](https://www.owasp.org) guidelines) and vulnerability scanning for dependencies and upgrading them to latest versions including applying necessary refactorings,
@@ -35,7 +36,7 @@ and 'Dockerizing' your builds and services.
 
 Please write to us (in English or Türkçe) using below form if you're interested in our services. Thank you.
 
-{% include contact.html %}
+{% include_relative contact.html %}
 
 {% comment %}
 Hi there! My name is Selim Eren Bekçe and I am a humble software person, living an intellectual life with beauty and harmony in ~~Ankara~~ Amsterdam.

@@ -1,8 +1,8 @@
 # Site settings
-title:       sebworks
+title:       bekce
 email:       seb@sebworks.com
 author:      Selim Eren Bekçe
-description: "Yet another programming blog"
+description: "Bekçe Software Solutions"
 baseurl:     ""
 url:         "https://bekce.github.io"
 # date_format: "%b %-d, %Y"
@@ -92,15 +92,15 @@ text:
   index:
     coming_soon: 'Coming soon...'
   contact:
-    email:    'Email Address'
-    content:  'What would you like to say?'
-    subject:  'New submission!'
-    submit:   'Say Hello'
+    email:    'Your email address'
+    content:  'Your inquiry...'
+    subject:  'Contact Request'
+    submit:   'Send'
     ajax:
       sending:  'sending..'
       sent:     'Message sent!'
       error:    'Error!'
-  thanks: 'Thanks for contacting me. I will reply as soon as possible.'
+  thanks: 'Thanks for contacting us. We will reply as soon as possible.'
   og_locale: 'en_US'
 
 # Build settings
