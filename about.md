@@ -36,9 +36,9 @@ and 'Dockerizing' your builds and services.
 
 Please write to us (in English or Türkçe) using below form if you're interested in our services. Thank you.
 
-{% comment %}
 {% include_relative contact.html %}
 
+{% comment %}
 Hi there! My name is Selim Eren Bekçe and I am a humble software person, living an intellectual life with beauty and harmony in ~~Ankara~~ Amsterdam.
 My initials are _seb_, so this site is the sandbox to my _works_, apparently.
 {% endcomment %}
