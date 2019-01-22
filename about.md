@@ -6,7 +6,38 @@ tags: about
 menu_enabled: true
 ---
 
-We can create custom software solutions for your business needs.
+We offer legacy software maintenance, refactoring and development services for Java based enterprise applications, 
+software specifically featuring any of
+Spring Framework (Core, Beans, JDBC, Data, Cloud), Java EE, Play Framework, Maven, Hibernate, JPA, Vaadin, REST and JSF 
+technologies, with our 10 years of software engineering experience in them.
+We are based in İzmir, Türkiye and in business since 2017.
 
+We can make your legacy solution faster, asynchronous, modern, compliant and secure by;
+
+- big-scale core refactorings,
+- making use of proper data structures and better memory management,
+- eliminating unnecessary caching or installing necessary caching of data,
+- refactoring synchronous operations to be fully asynchronous,
+- upgrading Java runtime and libraries to any version, including doing necessary code and build changes,
+- employ automatic database schema versioning methods to successfully perform database refactorings and schema updates without friction,
+- running security checks (according to [OWASP](https://www.owasp.org) guidelines) and vulnerability scanning for dependencies and upgrading them to latest versions including applying necessary refactorings,
+- utilizing proper security headers and practices in your software to guard against data theft and cyber attacks,
+- giving advise on hardware, software and network limitations and how to overcome them,
+- refactor & split a monolith into multiple microservices to make them run on different platforms without affecting each other,
+- installing monitoring on your applications to make sure they run 7/24, get notified for any issues, auto-recover from failures,
+- keep track all errors and exceptions and resolve them for you,
+- integrating your app with other platforms such as for authentication (enterprise/LDAP or oauth2 login) and other needs, and making sure the integration between those services is resilient to failures on both parties.
+- configure & install proper TLS certificates, reverse proxies (nginx, etc) and administer those Linux servers,
+- configure & administer mysql, postgres, and mongodb servers and their backup/restore operations,
+- utilize proper DevOps practices by building custom continuous integration & continuous delivery pipelines specific to your needs 
+and 'Dockerizing' your builds and services.
+- make your application run on cloud platforms such as AWS, GCP and Azure.
+
+Please write to us (in English or Türkçe) using below form if you're interested in our services. Thank you.
+
+{% include ajaxify_content_form.html %}
+
+{% comment %}
 Hi there! My name is Selim Eren Bekçe and I am a humble software person, living an intellectual life with beauty and harmony in ~~Ankara~~ Amsterdam.
 My initials are _seb_, so this site is the sandbox to my _works_, apparently.
+{% endcomment %}
