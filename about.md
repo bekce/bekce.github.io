@@ -24,7 +24,7 @@ We can make your legacy solution faster, asynchronous, modern, compliant and sec
 - running security checks (according to [OWASP](https://www.owasp.org) guidelines) and vulnerability scanning for dependencies and upgrading them to latest versions including applying necessary refactorings,
 - utilizing proper security headers and practices in your software to guard against data theft and cyber attacks,
 - giving advise on hardware, software and network limitations and how to overcome them,
-- refactor & split a monolith into multiple microservices to make them run on different platforms without affecting each other,
+- refactor & split a monolith into multiple microservices,
 - installing monitoring on your applications to make sure they run 7/24, get notified for any issues, auto-recover from failures,
 - keep track all errors and exceptions and resolve them for you,
 - integrating your app with other platforms such as for authentication (enterprise/LDAP or oauth2 login) and other needs, and making sure the integration between those services is resilient to failures on both parties.
@@ -36,7 +36,7 @@ and 'Dockerizing' your builds and services.
 
 Please write to us (in English or Türkçe) using below form if you're interested in our services. Thank you.
 
-{% include_relative contact.html %}
+{% include contact_matter.html %}
 
 {% comment %}
 Hi there! My name is Selim Eren Bekçe and I am a humble software person, living an intellectual life with beauty and harmony in ~~Ankara~~ Amsterdam.
