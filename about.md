@@ -6,15 +6,15 @@ tags: about
 menu_enabled: true
 ---
 
-We offer legacy software maintenance, refactoring and development services for Java based enterprise applications, 
+We mainly offer legacy software maintenance, refactoring and development services for Java based enterprise applications, 
 software specifically featuring any of
 Spring Framework (Core, Beans, JDBC, Data, Cloud), Java EE, Play Framework, Maven, Hibernate, JPA, Vaadin, REST and JSF 
 technologies, with our 10 years of software engineering experience in them.
 We are based in İzmir, Türkiye and in business since 2017.
 
-We can make your legacy solution faster, asynchronous, modern, compliant and secure by;
+We can make your legacy Java solution faster, asynchronous, scalable, distributed, modern, compliant and secure by;
 
-- big-scale core refactorings,
+- applying big-scale core refactorings,
 - making use of proper data structures and better memory management,
 - eliminating unnecessary caching or installing necessary caching of data,
 - refactoring synchronous operations to be fully asynchronous,
