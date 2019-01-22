@@ -6,6 +6,10 @@ tags: about
 menu_enabled: true
 ---
 
+Bekçe Yazılım Elektronik, Java tabanlı ve Spring Framework, Java EE, Play Framework, Vaadin, REST, Hibernate ve JPA teknolojilerinden en az birini kullanan, mevcut kurumsal uygulamaların teknik bakım, refactoring, güncelleme ve geliştirme faaliyetlerini üstlenmektedir. İlgili teknolojilerde 10 yıllık profesyonel yazılım mühendisliği/mimarisi tecrübemiz bulunmakta olup, firmamız 2017 senesinde İzmir'de kurulmuştur. Bize aşağıdaki formu kullanarak ulaşabilirsiniz, teşekkürler.
+
+<hr />
+
 Founded in 2017 in İzmir, Bekçe Yazılım Elektronik offers long-term legacy software maintenance, refactoring and development services for Java based enterprise applications, specificly for
 software featuring any of
 Spring Framework (Core, Beans, JDBC, Data, Cloud), Java EE, Play Framework, Vaadin, REST, Hibernate and JPA
@@ -33,7 +37,7 @@ We can make your legacy Java solution faster, asynchronous, scalable, distribute
 and 'Dockerizing' your builds and services.
 - make your application run on cloud platforms such as AWS, GCP and Azure.
 
-Please write to us (in English or Türkçe) using below form if you're interested in our services. Thank you.
+Please contact us using below form if you're interested in our services. Thank you.
 
 {% include contact_matter.html %}
 
