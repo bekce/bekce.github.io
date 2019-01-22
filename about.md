@@ -6,11 +6,10 @@ tags: about
 menu_enabled: true
 ---
 
-We mainly offer long-term legacy software maintenance, refactoring and development services for Java based enterprise applications, 
-software specifically featuring any of
-Spring Framework (Core, Beans, JDBC, Data, Cloud), Java EE, Play Framework, Maven, Hibernate, JPA, Vaadin, REST and JSF 
+Founded in 2017 in İzmir, Bekçe Yazılım Elektronik offers long-term legacy software maintenance, refactoring and development services for Java based enterprise applications, specificly for
+software featuring any of
+Spring Framework (Core, Beans, JDBC, Data, Cloud), Java EE, Play Framework, Vaadin, REST, Hibernate and JPA
 technologies, with our 10 years of software engineering experience in them.
-We are based in İzmir, Türkiye and in business since 2017.
 
 We can make your legacy Java solution faster, asynchronous, scalable, distributed, modern, compliant and secure by;
 
@@ -21,7 +20,7 @@ We can make your legacy Java solution faster, asynchronous, scalable, distribute
 - rewriting database accesses for specific needs by native queries with joins and aggregations to make data access extremely faster,
 - upgrading Java runtime and libraries to any version, including doing necessary code and build changes,
 - employ automatic database schema versioning methods to successfully perform database refactorings and schema updates without friction,
-- running security checks (according to [OWASP](https://www.owasp.org) guidelines) and vulnerability scanning for dependencies and upgrading them to latest versions including applying necessary refactorings,
+- running security checks (according to OWASP guidelines) and vulnerability scanning for dependencies and upgrading them to latest versions including applying necessary refactorings,
 - utilizing proper security headers and practices in your software to guard against data theft and cyber attacks,
 - giving advise on hardware, software and network limitations and how to overcome them,
 - refactor & split a monolith into multiple microservices,
