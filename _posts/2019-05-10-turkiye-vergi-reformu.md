@@ -5,7 +5,7 @@ date:       2019-05-21 18:00:00
 categories: turkiye-vergi-reformu
 ---
 
-Bu yazı dizisinde Türkiye'de Vergi Reform'u neden ve nasıl yapılmalıdır, ayrıntılı örneklerle açıklamaya çalışacağım. Yazının tamamı kişisel görüşlerimdir ve Avrupa'daki yaşantım boyunca edindiğim tecrübeler sayesinde oluşan düşüncelerimin bir kısmının yansıması olacaktır. Mülkiyeti şahsıma ait olup, alıntı yapmak ve kaynak (açık link) göstermek şartıyla başka mecralarda kullanılabilir.
+Bu yazı dizisinde Türkiye'de Vergi Reform'u neden ve nasıl yapılmalıdır, ayrıntılı açıklamaya çalışacağım. Yazının tamamı kişisel görüşlerimdir ve Avrupa'daki yaşantım boyunca edindiğim tecrübeler sayesinde oluşan düşüncelerimin bir kısmının yansıması olacaktır.
 
 ## Neden
 
@@ -49,8 +49,6 @@ Bunun reel ekonomiye katacağı belki de en önemli fayda işletmelerin artık k
 
 Peki diyeceksiniz kira gelir vergisinin olmadığı ortamda kirayı gelirden düşebilmek adaletsizliğe yol açmaz mı? Sanmam, çünkü işyeri olarak kiraya verilen gayrimenkulün emlak vergisi çarpanı daha yüksek olacak, yani aradaki vergi farkının bir kısmı oradan karşılanacak. Peki işyeri sahibinin mümkün olduğunda çok gider gösterebilme arzusunu nasıl bastıracaksınız? Yani kiracı ile emlak sahibi gelir vergisi avantajı için olduğundan fazla gider gösterebilmek adına sözleşmeyi yüksekten gösterebilir. Bu da belli yöntemlerle önlenebilir, dünyadaki örneklere bakılabilir, örneğin rayiç bedeller üzerinden gider kaleminde bir kota uygulamasına gidilebilir, vergi daireleri ve/veya belediyelerce oluşturulacak komisyonlar belirli aralıklarla gider olarak gösterilen kira sözleşme bedellerini denetleyebilir, en önemlisi de kiranın yüksek gösterilmesi gelecek sene emlak sahibinin ödemesi gereken emlak vergi matrahını artıracağından emlak sahibi tarafından tercih edilmeyecektir, bu durumda sözleşmede doğru bedelin tahsisi her iki taraf açısından da kazançlı olacağından taraflar doğru yolu seçecektir.
 
-## Gelir Vergisi Reformu
-
-Pek yakında!
-
 Selim Eren Bekçe
+
+Not: Yazının tüm hakları şahsıma ait olup, kaynak (web adresi) ve yazar gösterimi şartıyla kısmi alıntı yapılabilir, fakat tamamı aynen veya farklı şekillerde izinsiz kullanılamaz ve/veya yayımlanamaz.
