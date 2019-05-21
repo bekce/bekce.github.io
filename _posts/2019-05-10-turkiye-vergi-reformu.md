@@ -1,21 +1,19 @@
 ---
 layout:     post
 title:      Türkiye'de Vergi Reformu
-date:       2019-05-21 11:00:00
+date:       2019-05-21 18:00:00
 categories: turkiye-vergi-reformu
 ---
 
-Merhaba, 
-
-Bu yazı dizisinde Türkiye'de Vergi Reform'u neden ve nasıl yapılmalıdır, ayrıntılı örneklerle açıklamaya çalışacağım. Yazının tamamı kişisel görüşlerimdir ve Avrupa'daki yaşantım boyunca edindiğim tecrübeler ve bilgiler sayesinde oluşan düşüncelerimin bir kısmının yansıması olacaktır. Mülkiyeti şahsıma ait olup, alıntı yapmak ve kaynak (açık link) göstermek şartıyla bana sormaksızın başka mecralarda kullanılabilir.
+Bu yazı dizisinde Türkiye'de Vergi Reform'u neden ve nasıl yapılmalıdır, ayrıntılı örneklerle açıklamaya çalışacağım. Yazının tamamı kişisel görüşlerimdir ve Avrupa'daki yaşantım boyunca edindiğim tecrübeler sayesinde oluşan düşüncelerimin bir kısmının yansıması olacaktır. Mülkiyeti şahsıma ait olup, alıntı yapmak ve kaynak (açık link) göstermek şartıyla başka mecralarda kullanılabilir.
 
 # Neden
 
-Ülkemdeki finans ve vergi sistemini, uzmanı olmasam da, son yıllarda yaptığım okumalar ve ticaret sayesinde öğrendim. Yaklaşık son 2 senedir de Hollanda'da yaşayan bir Türk olarak buradaki finans ve vergi sistemini yakından gözlemleme şansım oldu. Bu süreçte iki sistemi kıyaslayıp Türkiye Cumhuriyeti olarak nerelerde geliştirmeler yapmamız gerektiği konusunda zihnimde devamlı tezahür eden düşünceler ortaya çıktı. Türkiye'yi içinde bulunduğu ekonomik bunalımdan uzun vadede kurtarabilecek, toplumun demokratikleşmesindeki en önemli etkenlerden biri olacak büyük kapsamlı bir Vergi Reform'unun gerekliliğine inanıyorum. Verginin adil, dengeli olarak alınması, dolaylı vergilerin paylarının azaltılıp doğrudan vergilerin payının artırılması, işletme maliyetlerinin düşürülerek yatırımların teşvik edilmesi, stopaj gibi kaynaktan kesilen vergilerin sıfırlanması, beyan üzerinden gelir vergisi formülüne geçilerek farkındalığın artırılması, emlak vergisinin düzenlenmesi, geçici olarak düzenlenip adaletsizliğe yol açan vergi muafiyeti veya ertelemelerinin kanun ile sınırlanması, modern bilişim sistemlerinin entegrasyonları gibi konular Vergi Reformu için son derece gereklidir.
+Türkiye'yi içinde bulunduğu ekonomik bunalımdan uzun vadede kurtarabilecek ve toplumun demokratikleşmesindeki en önemli etkenlerden biri olacak büyük kapsamlı bir Vergi Reformu'nun gerekliliğine inanıyorum. Yaklaşık son 2 senedir de Hollanda'da yaşayan bir Türk olarak buradaki finans ve vergi sistemini yakından gözlemleme ve bir beyin cimnastiği olarak Türkiye'deki sistemlerle kıyaslama ve olası geliştirme senaryolarını aklımda tartma şansım oldu. Verginin adil, dengeli olarak alınması, dolaylı vergilerin paylarının azaltılıp doğrudan vergilerin payının artırılması, işletme maliyetlerinin düşürülerek yatırımların teşvik edilmesi, stopaj gibi kaynaktan kesilen vergilerin sıfırlanması ya da azaltılması, beyan üzerinden gelir vergisi formülüne geçilerek farkındalığın artırılması, emlak vergisinin düzenlenmesi, geçici olarak düzenlenip ödeyen ile ödemeyen arasında adaletsizliğe yol açan vergi muafiyeti veya ertelemelerinin kanun ile sınırlanması, ödenmeyen vergi takibinin otomatikleştirilmesi, veri bilimi kullanılarak çeşitli mahrah hesaplamalarının yapılması, gayrimenkul ve motorlu taşıt gibi büyük alımların garantörlüğünün noterler tarafından yapılması, bankacılık sistemlerinin vergi daireleriyle entegrasyonu, vergi kalemlerinin azaltılıp basitleştirilmesi, modern bilişim sistemlerinin entegrasyonları gibi konular hakkında fikirlerimi paylaşmak istiyorum.
 
 # Emlak Vergisi Reformu
 
-Emlak vergisi, beyanname usulü verilen ve çeşitli istisnalara tabi bir vergi olup, basit olarak anlatmak gerekirse üzerinize kayıtlı gayrimenkullerin değerlemelerine göre yıllık binde 1 ile 6 arasında değişen bir orana sahiptir. Her sene emlakların bağlı bulunduğu belediyelere yapılan beyanname ile ödenmesi gerekir. Yani evinizin değerini belirtiyorsunuz veya sizin için belediye tarafından bir şekilde belirleniyor ve her sene belirlenen oranlarda bu matraha artış yapılıp yeni matrahın binde 1 ile 6 (taşınmaz tipine göre) ödemenizi yapıyorsunuz.
+Türkiye'de Emlak Vergisi, beyanname usulü verilen ve çeşitli istisnalara tabi bir vergi olup, basit olarak anlatmak gerekirse üzerinize kayıtlı gayrimenkullerin değerlemelerine göre yıllık binde 1 ile 6 arasında değişen bir oranda belediyelere ödediğiniz bir çeşit vergidir. Her sene emlakların bağlı bulunduğu belediyelere yapılan beyanname ile ödenmesi gerekir. Yani evinizin değerini belirtiyorsunuz veya sizin için belediye tarafından bir şekilde belirleniyor ve her sene belirlenen oranlarda bu matraha artış yapılıp yeni matrahın binde 1 ile 6 (taşınmaz tipine göre) ödemenizi yapıyorsunuz.
 
 ### Online Emlak Değerleme ve Kadastro Sistemi
 
