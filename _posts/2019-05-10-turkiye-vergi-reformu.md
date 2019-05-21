@@ -7,11 +7,11 @@ categories: turkiye-vergi-reformu
 
 Bu yazı dizisinde Türkiye'de Vergi Reform'u neden ve nasıl yapılmalıdır, ayrıntılı örneklerle açıklamaya çalışacağım. Yazının tamamı kişisel görüşlerimdir ve Avrupa'daki yaşantım boyunca edindiğim tecrübeler sayesinde oluşan düşüncelerimin bir kısmının yansıması olacaktır. Mülkiyeti şahsıma ait olup, alıntı yapmak ve kaynak (açık link) göstermek şartıyla başka mecralarda kullanılabilir.
 
-# Neden
+## Neden
 
 Türkiye'yi içinde bulunduğu ekonomik bunalımdan uzun vadede kurtarabilecek ve toplumun demokratikleşmesindeki en önemli etkenlerden biri olacak büyük kapsamlı bir Vergi Reformu'nun gerekliliğine inanıyorum. Yaklaşık son 2 senedir de Hollanda'da yaşayan bir Türk olarak buradaki finans ve vergi sistemini yakından gözlemleme ve bir beyin cimnastiği olarak Türkiye'deki sistemlerle kıyaslama ve olası geliştirme senaryolarını aklımda tartma şansım oldu. Verginin adil, dengeli olarak alınması, dolaylı vergilerin paylarının azaltılıp doğrudan vergilerin payının artırılması, işletme maliyetlerinin düşürülerek yatırımların teşvik edilmesi, stopaj gibi kaynaktan kesilen vergilerin sıfırlanması ya da azaltılması, beyan üzerinden gelir vergisi formülüne geçilerek farkındalığın artırılması, emlak vergisinin düzenlenmesi, geçici olarak düzenlenip ödeyen ile ödemeyen arasında adaletsizliğe yol açan vergi muafiyeti veya ertelemelerinin kanun ile sınırlanması, ödenmeyen vergi takibinin otomatikleştirilmesi, veri bilimi kullanılarak çeşitli mahrah hesaplamalarının yapılması, gayrimenkul ve motorlu taşıt gibi büyük alımların garantörlüğünün noterler tarafından yapılması, bankacılık sistemlerinin vergi daireleriyle entegrasyonu, vergi kalemlerinin azaltılıp basitleştirilmesi, modern bilişim sistemlerinin entegrasyonları gibi konular hakkında fikirlerimi paylaşmak istiyorum.
 
-# Emlak Vergisi Reformu
+## Emlak Vergisi Reformu
 
 Türkiye'de Emlak Vergisi, beyanname usulü verilen ve çeşitli istisnalara tabi bir vergi olup, basit olarak anlatmak gerekirse üzerinize kayıtlı gayrimenkullerin değerlemelerine göre yıllık binde 1 ile 6 arasında değişen bir oranda belediyelere ödediğiniz bir çeşit vergidir. Her sene emlakların bağlı bulunduğu belediyelere yapılan beyanname ile ödenmesi gerekir. Yani evinizin değerini belirtiyorsunuz veya sizin için belediye tarafından bir şekilde belirleniyor ve her sene belirlenen oranlarda bu matraha artış yapılıp yeni matrahın binde 1 ile 6 (taşınmaz tipine göre) ödemenizi yapıyorsunuz.
 
@@ -41,7 +41,7 @@ Arada belirtmeden geçemeyeceğim, usüllerdeki değişikliklerin ve reformları
 
 Tüm bu değişikliklerin yapılması esnasında da emlak vergileri kademeli olarak artırılıp istisna hükümleri genişletilmelidir. Örneğin gerçek kişilerin bizzat sahibi olarak ikamet ettiği ev sosyal statüden bağımsız olarak istisna kapsamına girmelidir (mevcut durumda sadece emekli ve sanırım muhtaçlara bu hak tanınıyor). Nüfus oranı olarak en çok kişiyi ilgilendiren 'Büyükşehir içerisinde yer alan meskenler' tipindeki emlak vergisi binde ikidir. Şahsi fikrimce bu oranın binde üçe çıkarılıp (diğer tiplerin de yaklaşık aynı oranda artırılması, fakat arazi hariç, o zaten çok yüksek), kira geliri vergisinin kaldırılması, vergiyi toprak/ev sahibinin üzerinde daha adaletli dağılımını sağlayacaktır. Tapu transfer harcının yüzde altıdan yüzde ikiye düşürülmesi ve ikamet edilen gayrimenkulün (asgari ücrete dayalı bir üst limite kadar) vergiden muaf tutulması değişikliği ile birlikte, daha adil emlak vergisinden söz edilebilecektir. Emlak vergisinin tabandan alınıp tavana yayılması, tapu harçlarının azalması ile birlikte atıl durumda ve/veya miras yoluyla edinilmiş taşınmazların el değiştirme, ekonomiye kazandırılma ve geri dönüşüm süreçlerini doğal olarak hızlandıracak, gayrimenkul sektöründeki kullanım verimliliğini artıracaktır.
 
-# Kira Gelir Vergisi / Stopaj Reformu
+## Kira Gelir Vergisi / Stopaj Reformu
 
 Kira gelir vergisinin kaldırılması neden bu kadar önemli? Biliyorsunuz gelir kanunu'na göre kira gelirlerinizin yaklaşık yıllık yüzde sekizini (istisnalar hariç) vergi olarak ödemeniz gerekiyor. Pratikte devlet emlak vergisini yapı bozukluğundan dolayı alamadığı için kira gelir vergisi adıyla iki sene önce bir vergi icat etti. Daha sonra banka aracılığıyla gönderilen her ödemenin kira olup olmadığını belirtmek zorunda olduğunuz, dünyanın hiçbir yerinde göremeyeceğiniz bir şekilde, yarı otomatik yöntemlerle tespit ve tahsil etmeye çalışıyor. Yukarıda belirttiğim tüm reformların yapılması durumunda devlet bu aczinden arınıp emlak sahibini (taşınmaz kirada olsun/olmasın) direk olarak doğru bir şekilde vergilendirmesi (istisnalar devam etmeli hatta genişletilmeli) sağlanacak. 
 
@@ -49,7 +49,7 @@ Bunun reel ekonomiye katacağı belki de en önemli fayda işletmelerin artık k
 
 Peki diyeceksiniz kira gelir vergisinin olmadığı ortamda kirayı gelirden düşebilmek adaletsizliğe yol açmaz mı? Sanmam, çünkü işyeri olarak kiraya verilen gayrimenkulün emlak vergisi çarpanı daha yüksek olacak, yani aradaki vergi farkının bir kısmı oradan karşılanacak. Peki işyeri sahibinin mümkün olduğunda çok gider gösterebilme arzusunu nasıl bastıracaksınız? Yani kiracı ile emlak sahibi gelir vergisi avantajı için olduğundan fazla gider gösterebilmek adına sözleşmeyi yüksekten gösterebilir. Bu da belli yöntemlerle önlenebilir, dünyadaki örneklere bakılabilir, örneğin rayiç bedeller üzerinden gider kaleminde bir kota uygulamasına gidilebilir, vergi daireleri ve/veya belediyelerce oluşturulacak komisyonlar belirli aralıklarla gider olarak gösterilen kira sözleşme bedellerini denetleyebilir, en önemlisi de kiranın yüksek gösterilmesi gelecek sene emlak sahibinin ödemesi gereken emlak vergi matrahını artıracağından emlak sahibi tarafından tercih edilmeyecektir, bu durumda sözleşmede doğru bedelin tahsisi her iki taraf açısından da kazançlı olacağından taraflar doğru yolu seçecektir.
 
-# Gelir Vergisi Reformu
+## Gelir Vergisi Reformu
 
 Pek yakında!
 
